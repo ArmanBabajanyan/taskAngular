@@ -1,0 +1,153 @@
+.middle-section__right {
+    margin-left:auto;
+    color: #7b7b7b;
+    font-size: 20px;
+}
+
+.location__title {
+    max-width: 600px;
+}
+
+.location__title-top {
+    font-family: "circule_black";
+    font-size: 40px;
+    margin: 0 0 19px 0;
+    color:#000000;
+}
+
+.description-field {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.select-location {
+    width: 100%;
+    padding: 10px 15px;
+    color: #9a9a9a;
+}
+
+.select-location::placeholder {
+    color: #9a9a9a;
+}
+
+.simbols {
+    color: #040404;
+    font-size: 16px;
+}
+
+.description-textarea { 
+    resize: none;
+    width: 100%;
+    min-height: 288px;
+    color: #9a9a9a;
+    padding: 10px 0 0 15px;
+}
+
+.description-textarea::placeholder {
+    color: #9a9a9a;
+}
+
+.price-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #9a9a9a;
+    padding: 10px 15px;
+
+}
+
+.select-category__title {
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+
+.amount-input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+
+.value-type {
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    padding-left: 10px;
+    border-left: 1px solid #9a9a9a;
+    background: transparent
+}
+
+.amount-input::-webkit-inner-spin-button {
+    opacity: 0;
+}
+
+.accept-input {
+    display: none;
+
+}
+.accept-input:checked ~ .check-mark__field .check-mark {
+    display: flex;
+}
+
+.accept-field {
+    user-select: none;
+    margin: 38px 0 81px 0 ;
+    display: inline-flex;
+    align-items: center;
+    color: #000000;
+    cursor: pointer;  
+}
+
+.check-mark__field {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #9a9a9a;
+    margin-right: 20px;
+  
+}
+
+.check-mark {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-mark__svg {
+    width: 17px;
+    height: 17px;
+}
+
+.continue {
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 120px;
+    font-size: 15px;
+    border: 0;
+    box-shadow: 0px 0px 22px 5px rgba(0,0,0,0.35);
+    cursor: pointer;
+    transition: .15s;
+}
+
+.continue:hover {
+    box-shadow: none;
+}
+
+.continue:disabled {
+    background: #3d3b3b;
+    cursor: initial
+}
+
+
+.continue:hover {
+    box-shadow: none;
+}
+
+.continue:disabled {
+    background: #3d3b3b;
+    cursor: initial
+}

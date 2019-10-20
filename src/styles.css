@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+*, :after, :before {
+    box-sizing: border-box;
+    font-family: "circular_regular";
+}
+@font-face {
+    font-family: "circular_regular";
+    src: url(./assets/fonts/CircularStd-Book.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "circular_black";
+    src: url(./assets/fonts/CircularStd-Black.otf) ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+

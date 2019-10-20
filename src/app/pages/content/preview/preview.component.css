@@ -1,0 +1,177 @@
+.middle-section__right {
+    margin-left:auto;
+    color: #7b7b7b;
+    font-size: 20px;
+    max-width: 600px;
+}
+
+.location__title-top {
+    font-family: "circule_black";
+    font-size: 40px;
+    margin: 0 0 19px 0;
+    color:#000000;
+}
+
+.preview-photos {
+   
+    height: 300px;
+    display: flex;
+}
+
+.preview-photo1 {
+    width: 70%;
+}
+
+.preview-photo2  {
+    width: 29%;
+} 
+
+.preview-photo__img {
+    width: 100%;
+    height: 100%;
+}
+
+.user-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.user-field:hover {
+    transform: scale(1.05);
+}
+
+.user-photo {
+    display: inline-block;
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     overflow: hidden;
+     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-right: 5px;
+}
+
+.user-photo__img {
+    width: 100%;
+    height: 100%;
+}
+
+.user-name{
+    color: #000000;
+    font-size: 18px;
+}
+
+.preview-user-field {
+    justify-content: flex-start;
+    margin: 50px 0;
+}
+
+.preview__title {
+    margin-bottom: 90px;
+    font-size: 40px;
+}
+
+.preview-text {
+    color: #272727;
+    line-height: 30px;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.preview-user-field:hover {
+    transform: scale(1);
+}
+
+.full-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9e9e9e;
+    z-index: 100;
+}
+
+.show{
+    display: none
+}
+
+.wrapper {
+    height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.submitted {
+    width: 500px;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding:    30px 60px;
+    line-height: 30px;
+}
+
+.submitted-title {
+    font-family: "circular_black";
+    width: 300px;
+    margin: 20px auto;
+    font-size: 26px;
+    color: #000;
+}
+
+.submitted-text {
+    width: 400px;
+    font-size: 20px;
+}
+
+.submitted-link {
+    display: inline-block;
+    background-color: #000000;
+    box-shadow: 0px 0px 22px 5px rgba(0,0,0,0.35);
+    padding: 10px 105px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;  
+    margin: 40px 0;
+    border: none
+}
+
+.continue {
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 120px;
+    font-size: 15px;
+    border: 0;
+    box-shadow: 0px 0px 22px 5px rgba(0,0,0,0.35);
+    cursor: pointer;
+    transition: .15s;
+}
+
+.continue:hover {
+    box-shadow: none;
+}
+
+.continue:disabled {
+    background: #3d3b3b;
+    cursor: initial
+}
+
+
+.continue:hover {
+    box-shadow: none;
+}
+
+.continue:disabled {
+    background: #3d3b3b;
+    cursor: initial
+}

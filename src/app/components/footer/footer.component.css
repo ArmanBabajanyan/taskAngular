@@ -1,0 +1,137 @@
+.footer {
+    box-shadow: 0px -3px 17px #00000029;
+}
+
+.footer__inner {
+    max-width: 87%;
+    margin:0 auto; 
+}
+
+.footer__inner-top {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__list-row{
+    list-style-type: none;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.footer__list {
+    padding: 7px 0;
+}
+
+.footer-info {
+    display: inline-block;
+    width: 50px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.footer__link {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer__link:hover {
+    color: #551a8b;
+}
+
+.footer__list-title {
+    margin-top: 0;
+    font-family: "circular_black";
+    font-size: 18px;
+}
+
+.footer__networks-title {
+    margin: 0 0 10px 0;
+    font-family: "circular_black";
+    font-size: 18px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px 15px 5px;
+    color: #9a9a9a;
+}
+
+.networks__link {
+    display: inline-block;
+}
+
+.networks__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.networks__svg{
+    display: inline-block;
+    width: 20px;
+    transition: .2s;
+    
+}
+.networks__svg:hover {
+    transform: scale(1.2);
+}
+
+.networks {
+    margin-right: 20px;
+}
+
+.networks:last-child {
+    margin: 0;
+}
+
+.facebook-svg {
+    width: 100%;
+    height: auto;
+}
+
+.subscribe-title {
+    font-family: "circular_black";
+    font-size: 18px;
+}
+
+.subscribe-input {
+    width: 300px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    outline: 0;
+    padding: 5px; 
+}
+
+.subscribe__label {
+    position: relative;
+}
+
+.subscribe-svg {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    cursor: pointer; 
+}
+
+.subscribe__label:hover .subscribe-svg {
+    animation-duration: 0.7s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+    0% {
+        right:5px
+    }
+    50% {
+        right: 0;
+    }
+    100% {
+        right: 5px;
+    }
+}

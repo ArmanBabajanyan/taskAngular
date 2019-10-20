@@ -1,0 +1,39 @@
+
+.category-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    
+}
+
+.category {
+    display: flex;
+    padding-bottom: 40px ;
+}
+
+.category-but {
+    text-decoration: none;
+    color: #7b7b7b;
+    background: transparent;
+    border: none
+}
+
+
+.category-number {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.category-name {
+    line-height: 20px;
+    opacity: 0.4;
+}
+
+.bold{
+    opacity: 1;
+}
+
+.check:after{
+    content: url('../../../assets/icons/check.svg');
+    margin-left: 15px ;
+}

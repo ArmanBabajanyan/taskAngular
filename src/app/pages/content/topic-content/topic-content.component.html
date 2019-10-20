@@ -1,0 +1,51 @@
+<div class="middle-section__right">
+  <div class="location__title">
+    <h2 class="location__title-top">Topic content</h2>
+    <p class="location__title-text">Give name to the topic that will attract as many people as possible. The more people upvoted for it, the more are chances
+      that it will be started. Describe project and why it is important to start.</p>
+  </div>
+  <form [formGroup]="topicForm" class="select-category__form">
+    <div class="select-category__title">
+      Title
+    </div>
+    <input class="select-location" type="text" placeholder="Write title" formControlName="title">
+    <span *ngIf="topicForm.get('title').touched && topicForm.get('title').invalid" style="float: left" style="color: red;font-size: 12px">title is empty</span>
+    <div class="description-field">
+      <div class="description">Desciription </div>
+      <div class="simbols">min 500 {{textCount? '- '+textCount: ''}} simbols</div>
+    </div>
+    <textarea placeholder="Topic description" (input)="count($event.target.value)" class="description-textarea" formControlName="description"></textarea>
+    <span *ngIf="topicForm.get('description').touched && topicForm.get('description').invalid" style="float: left" style="color: red;font-size: 12px">min 500 simbols</span>
+    <div class="select-category__title">
+      Rough project budget
+    </div>
+    <label class="price-field">
+      <input class="amount-input" type="text" placeholder="Write amount" formControlName="amount">
+      <select class="value-type" name="dram" id="">
+        <option class="value" value="1">Amd</option>
+        <option class="value" value="2">Usd</option>
+        <option class="value" value="3">Rub</option>
+      </select>
+    </label>
+    <p *ngIf="topicForm.get('amount').touched && topicForm.get('amount').invalid" style="float: left" style="color: red;font-size: 12px">please type only number</p>
+    <label class="accept-field">
+      <input class="accept-input" type="checkbox" (change)="checkCheckBoxvalue($event)">
+      <div class="check-mark__field">
+        <span class="check-mark">
+          <svg class="check-mark__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+
+            <path d="M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0
+c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7
+C514.5,101.703,514.499,85.494,504.502,75.496z" />
+
+          </svg>
+        </span>
+      </div>
+      <div class="accept-text">I am not sure how much amount is required</div>
+    </label>
+    <div>
+      <button class="continue" [disabled]="topicForm.invalid" (click)="topicData()">Continue</button>
+    </div>
+  </form>
+</div>

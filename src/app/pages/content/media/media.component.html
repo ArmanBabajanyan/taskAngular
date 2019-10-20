@@ -1,0 +1,57 @@
+<div class="middle-section__right">
+  <div class="location__title">
+    <h2 class="location__title-top"> Media</h2>
+    <p class="location__title-text">Choose images for the overview section of your topic.</p>
+  </div>
+  <div action="" class="media-form">
+    <label class="media-label">
+      <input type="file" class="media-input" (change)="setFile($event)" accept="image/x-png,image/gif,image/jpeg">
+      <span class="add">
+        <svg xmlns="http://www.w3.org/2000/svg" class="add-svg" viewBox="0 0 36.754 36.753">
+          <defs>
+            <style>
+              .a {
+                fill: #f11b5d;
+              }
+            </style>
+          </defs>
+          <path class="a" d="M34.623,16.246H20.508V2.131a2.131,2.131,0,1,0-4.262,0V16.246H2.131a2.131,2.131,0,1,0,0,4.262H16.246V34.623a2.131,2.131,0,0,0,4.262,0V20.508H34.623a2.131,2.131,0,0,0,0-4.262Z"
+          />
+        </svg>
+      </span>
+    </label>
+      <div class="media-list" *ngFor="let e of images;let i = index">
+        <img [src]="e" alt="" *ngIf="images.length" class="media-list-img" (click)="showSlide(i)">
+        <button class="delete" (click)="deleteImg(i)">
+          <svg version="1.1" class="cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            fill="white" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+            <polygon points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397 
+  306,341.411 576.521,611.397 612,575.997 341.459,306.011 			" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <button class="continue" [disabled]="uploadFiles.length == 0" (click)="topicData()">Continue</button>
+  </div>
+  <div class='full-screen' *ngIf="show">
+    <div class="wrapper" (click)="hideSlide($event)">
+      <div class="full-photo-field">
+        <img [src]="images[imgIndex]? images[imgIndex]: ''" alt="" class="full-photo">
+        <button class="next-button" (click)="changeSlideImg('next')">
+          <svg version="1.1" class="next-button__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+            <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+  c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
+  " />
+          </svg>
+        </button>
+        <button class="preview-button" (click)="changeSlideImg('prev')">
+          <svg version="1.1" class="preview-button__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 477.175 477.175" style="enable-background:new 0 0 477.175 477.175;" xml:space="preserve">
+            <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+  c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>

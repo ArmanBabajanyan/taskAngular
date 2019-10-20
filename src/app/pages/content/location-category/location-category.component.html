@@ -1,0 +1,29 @@
+<div class="middle-section__right">
+  <div class="location__title">
+    <h2 class="location__title-top">Location and category</h2>
+    <p class="location__title-text">Please select your project category and choose location of your proposed project</p>
+  </div>
+  <form [formGroup]="catForm" class="select-category__form" (ngSubmit)="topicData()">
+    <div class="select-category__title">
+      Category
+    </div>
+    <div class="sel-cat">
+      <select class="select-category" formControlName="categoryId">
+        <option name="category" *ngFor="let e of categories" [ngValue]="e.id">{{e.name}}</option>
+      </select>
+    </div>
+    <div class="select-category__title">
+      Location
+    </div>
+    <input class="select-location" placeholder="Choose Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"
+      #search formControlName="address">
+    <span *ngIf="catForm.get('address').touched && catForm.get('address').invalid" style="float: left" style="color: red;font-size: 12px">location is empty</span>
+    <div class="map">
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [fullscreenControl]="true">
+        <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true" [iconUrl]="{url: 'https://www.allosmartfun.fr/img/map-icon-red.png',scaledSize: {width: 40,height: 40}}">
+        </agm-marker>
+      </agm-map>
+    </div>
+    <button class="continue" [disabled]="catForm.invalid">Continue</button>
+  </form>
+</div>

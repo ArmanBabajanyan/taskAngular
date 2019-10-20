@@ -1,0 +1,32 @@
+<div class="middle-section__left">
+  <ul class="category-list">
+    <li class="category">
+      <button class="category-but" disabled="disabled">
+        <div [ngClass]="['category-name bold ' + location]" >
+        1. Category and Location
+        </div>
+      </button>
+    </li>
+    <li class="category">
+      <button class="category-but" disabled="disabled">
+        <div [ngClass]="['category-name ' + topContent]">
+          2. Topic Content
+        </div>
+      </button>
+    </li>
+    <li class="category">
+      <button class="category-but" disabled="disabled">
+        <div [ngClass]="['category-name ' + media]">
+          3. Media
+        </div>
+      </button>
+    </li>
+    <li class="category">
+      <button  class="category-but" disabled="disabled">
+        <div [ngClass]="['category-name ' + preview]">
+          4. Preview
+        </div>
+      </button>
+    </li>
+  </ul>
+</div>

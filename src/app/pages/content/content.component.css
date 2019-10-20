@@ -1,0 +1,9 @@
+.middle-section__inner {
+    max-width: 1160px;
+    display: flex;
+    margin: 120px auto 55px auto;
+}
+
+app-middle-menu{
+    width: 30%;
+}
